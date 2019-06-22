@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbStudent" Class="dbLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SOFTDOTNET-PC\MSSQLSERVER2014;Initial Catalog=dbStudent;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dbStudentConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.StudMst" Member="StudMsts">
+    <Type Name="StudMst">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Lname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Fees" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Doj" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,75 @@
+﻿@model projScaffoldingLinq.StudMst
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
+    
+        <fieldset>
+            <legend>StudMst</legend>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Fname)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Fname)
+                @Html.ValidationMessageFor(model => model.Fname)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Lname)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Lname)
+                @Html.ValidationMessageFor(model => model.Lname)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Course)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Course)
+                @Html.ValidationMessageFor(model => model.Course)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Fees)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Fees)
+                @Html.ValidationMessageFor(model => model.Fees)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Doj)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Doj)
+                @Html.ValidationMessageFor(model => model.Doj)
+            </div>
+    
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
